@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BotFactory - Automatizamos tu Negocio 24/7</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Estilos generales */
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #0056b3;
+            --background-color: #f4f7f9;
+            --text-color: #333;
+            --light-text-color: #fff;
+            --card-bg: #fff;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .main-header {
+            background: var(--primary-color);
+            color: var(--light-text-color);
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            margin: 0;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .main-nav a {
+            color: var(--light-text-color);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .main-nav a:hover {
+            color: #c0e0ff;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #001f3f, #0074e4);
+            color: var(--light-text-color);
+            text-align: center;
+            padding: 6rem 20px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            color: #d0eaff;
+        }
+
+        .hero-text {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background-color: #25d366;
+            color: var(--light-text-color);
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #128c7e;
+            transform: translateY(-3px);
+        }
+
+        .cta-button i {
+            margin-right: 10px;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 4rem 20px;
+            text-align: center;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #666;
+        }
+
+        /* Footer */
+        .main-footer {
+            background-color: #1a1a1a;
+            color: #b0b0b0;
+            padding: 3rem 20px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-contact h3,
+        .footer-social h3 {
+            color: var(--light-text-color);
+            margin-bottom: 15px;
+        }
+
+        .footer-contact a,
+        .footer-social a {
+            color: #b0b0b0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-contact a:hover,
+        .footer-social a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-social a {
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+
+        .copyright {
+            margin-top: 2rem;
+            text-align: center;
+            width: 100%;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .header-container,
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .main-nav {
+                margin-top: 1rem;
+            }
+
+            .main-nav a {
+                margin: 0 10px;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .footer-contact,
+            .footer-social {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <h1 class="logo">BotFactory</h1>
+            <nav class="main-nav">
+                <a href="#services">Servicios</a>
+                <a href="#contact">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="hero-section">
+        <div class="hero-content">
+            <h2 class="hero-title">Automatizamos tu Negocio 24/7</h2>
+            <p class="hero-subtitle">Creamos e instalamos empleados digitales con IA que atienden a tus clientes por WhatsApp, gestionan turnos, pedidos y resuelven dudas.</p>
+            <p class="hero-text">Deja de perder ventas por no poder responder a tiempo. Tu negocio nunca duerme, y ahora tu atención al cliente tampoco.</p>
+            <button id="whatsapp-button" class="cta-button">
+                <i class="fab fa-whatsapp"></i> Hablar con un Asesor
+            </button>
+        </div>
+    </main>
+
+    <section id="services" class="services-section">
+        <div class="section-container">
+            <h2 class="section-title">¿Cómo te ayudamos a crecer?</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-robot"></i>
+                    <h3>Atención 24/7</h3>
+                    <p>Nuestro bot responde de forma instantánea a todas las consultas de tus clientes, sin importar la hora.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Aprendizaje Constante</h3>
+                    <p>El bot aprende de tus respuestas, volviéndose más inteligente y preciso con cada interacción.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>Aumento de Ventas</h3>
+                    <p>No pierdas más clientes por no poder atender el WhatsApp. El bot está siempre listo para cerrar ventas.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Automatización Total</h3>
+                    <p>Integramos el bot con tus sistemas para agendar turnos, tomar pedidos y enviar recordatorios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="main-footer">
+        <div class="footer-container">
+            <div class="footer-contact">
+                <h3>Contacto</h3>
+                <p>Teléfono: <a href="tel:+5491171158427">+54 9 11 7115 8427</a></p>
+                <p>Email: <a href="mailto:brianleonelponce@gmail.com">brianleonelponce@gmail.com</a></p>
+            </div>
+            <div class="footer-social">
+                <h3>Síguenos</h3>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="copyright">© 2025 BotFactory. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('whatsapp-button').addEventListener('click', function() {
+            const phoneNumber = '5491171158427'; // Tu número de WhatsApp con código de país 54 y 9.
+            const message = encodeURIComponent('Hola BotFactory, me gustaría saber más sobre cómo automatizar mi negocio.');
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
+</body>
+</html>
